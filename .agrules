@@ -1,0 +1,24 @@
+# Agent Rules for AutoRL
+# These rules enforce the Google Code Style Guide and Project Standards
+
+01. Always use uv package manager to install and run any python packages (eg uv run main.py)
+02. Error Handling: Fail loudly, Let it crash if the code cant proceed if it crashes. (try catch only if failing is acceptable outcome)
+03. Exception Handling: Always use specific exceptions never use genric ones
+
+04. ai_interaction_rules:
+  - logic_validation: "If a suggested logic contradicts factual robotics benchmarks or math, correct me immediately."
+  - no_flattery: "Do not apologize or use filler language. Provide the most efficient, outcome-oriented code."
+  - context_hygiene: "Before implementing a feature, check the existing 'Project Structure' to prevent duplicate utility functions."
+  - pre_coding_information_gathering: "ALWAYS ask for all relevant information (e.g., config parameters, API schemas, target model architectures, database schemas, etc.) and ensure complete understanding of requirements BEFORE writing any code."
+  - documentation: "Every classs and function must have a docstring explaining its 'Input State' and 'Output State' transitions."
+
+05. Use standard logging. No print statement except durind debugging
+
+06. Google Python Style Guide conventions:
+  - Follow the [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html) conventions for all Python code.
+  - Ensure maximum line length is 80 characters.
+  - Use 4 spaces for indentation (no tabs).
+  - Provide Google-style docstrings for all classes and functions.
+  - Use strong type hinting for all function parameters and returns wherever possible.
+  - Naming rules: `lower_snake_case` for variables/functions, `CamelCase` for classes, `UPPER_SNAKE_CASE` for constants.
+  - Prioritize absolute imports over relative ones.
