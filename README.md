@@ -8,6 +8,14 @@ AutoRobot-RL implements Andrei Karpathy's "AutoResearch" philosophy. Instead of 
 
 ## 🛠️ How It Works
 
+**Setup & Installation:**
+Ensure you initialize the git submodules containing the MuJoCo assets when cloning:
+```bash
+git clone --recursive https://github.com/Om-Kulkarni/AutoRL.git
+# Or if already cloned:
+# git submodule update --init --recursive
+```
+
 The system operates in a closed-loop "Scientific Method" cycle:
 
 1.  **Hypothesize:** The `researcher.py` (GPT-4/Claude) reads the output/logs from the previous run.

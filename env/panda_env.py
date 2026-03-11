@@ -22,7 +22,7 @@ class PandaEnv(gym.Env):
         - Actuator controls for the arm and gripper joints.
     """
 
-    metadata = {"render_modes": ["rgb_array", "human"]}
+    metadata = {"render_modes": ["rgb_array"]}
 
     def __init__(self, render_mode: Optional[str] = None):
         """Initializes the Panda environment."""
@@ -88,8 +88,8 @@ class PandaEnv(gym.Env):
         image = self.renderer.render()
         
         return {
-            "qpos": self.data.qpos.copy(),
-            "qvel": self.data.qvel.copy(),
+            "qpos": self.data.qpos.astype(np.float32),
+            "qvel": self.data.qvel.astype(np.float32),
             "image": image,
         }
 
