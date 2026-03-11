@@ -22,3 +22,7 @@
   - Use strong type hinting for all function parameters and returns wherever possible.
   - Naming rules: `lower_snake_case` for variables/functions, `CamelCase` for classes, `UPPER_SNAKE_CASE` for constants.
   - Prioritize absolute imports over relative ones.
+
+07. Keep it Simple:
+  - Focus on simpler code instead of more rigorous code
+  - Lesser lines of code and ease of reading is the priority 
